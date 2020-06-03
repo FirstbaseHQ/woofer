@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org">
+<head>
+    <title>Woofer | What's on your pets mind?</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img height="30" th:src="@{images/logo.svg}"> Woofer</a>
+    <span class="navbar-text">
+            What's on your dogs mind?
+        </span>
+</nav>
+<div class="container">
+    <div class="media shadow mb-3">
+            <img class="mr-3 align-self-start" th:src="${dog.profile_picture}" style="max-height: 64px; max-width: 64px;"/>
+            <div class="media-body">
+               <h5 class="mt-0" th:text="${dog.name}"></h5>
+                <h6 class="mt-0" th:text="${dog.breed}"></h6>
+            </div>
+    </div>
+    <div class="media mb-3 border-bottom-1 shadow p-3" th:each="woof: ${dog.woofs}">
+        <div class="media-body">
+            <p class="mt-0" th:text="${woof.message}"></p>
+        </div>
+    </div>
+</div>
+<script src="/webjars/jquery/jquery.min.js"></script>
+<script src="/webjars/sockjs-client/sockjs.min.js"></script>
+<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+</body>
+</html>
