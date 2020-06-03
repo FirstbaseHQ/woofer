@@ -12,5 +12,5 @@ I think this is production ready, but I need it reviewed! Help me find the bugs.
 **hint** there are no compile errors, but there are a few runtime errors that occur
 
 ## Screenshots
-![main_screen](https://raw.githubusercontent.com/FirstbaseHQ/woofer/screenshots/main.png)
-![profile_page](https://raw.githubusercontent.com/FirstbaseHQ/woofer/screenshots/profile_page.png) 
+![main_screen](screenshots/main.png)
+![profile_page](screenshots/profile_page.png) 
